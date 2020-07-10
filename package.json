@@ -1,0 +1,24 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "This is the api for a social network. Contains models and routes for users, and their content.",
+  "main": "server.js",
+  "dependencies": {
+    "mongoose": "^5.9.22"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anishasnet/social-network-api.git"
+  },
+  "author": "anishasnet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/anishasnet/social-network-api/issues"
+  },
+  "homepage": "https://github.com/anishasnet/social-network-api#readme"
+}

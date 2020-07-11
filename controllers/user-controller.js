@@ -64,3 +64,53 @@ const userController = {
             .catch(err => res.status(400).json(err));
 
     },
+    addFriend({params}, res) {
+        // console.log(params);
+        User.findByIdAndUpdate(
+            { _id: params.id}, 
+            { $push: {friends: params.friendId}},
+            { new: true, runValidators: true}
+        )
+            .populate({
+                path: 'friends',
+                select: '_id'
+            })
+            .select('-__v')
+            .then(dbUserData => {
+                console.log('omg')
+                if(!dbUserData) {
+                    res.status(404).json({ message: 'There is no user associated with this ID.'})
+                    return;
+                }
+                res.json(dbUserData)
+            })
+            .catch(err => {
+                res.status(400).json(err)
+            })
+    },
+    removeFriend({params}, res) {
+        console.log(params);
+        User.findByIdAndUpdate(
+            { _id: params.id}, 
+            { $pull: {friends: params.friendId}},
+            { new: true, runValidators: true}
+        )
+            .populate({
+                path: 'friends',
+                select: '_id'
+            })
+            .select('-__v')
+            .then(dbUserData => {
+                if(!dbUserData) {
+                    res.status(404).json({ message: 'There is no user associated with this ID.'})
+                    return;
+                }
+                res.json(dbUserData)
+            })
+            .catch(err => {
+                res.status(400).json(err)
+            })
+    }
+}
+module.exports = userController;
+

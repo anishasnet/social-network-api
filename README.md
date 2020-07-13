@@ -6,7 +6,7 @@ This repository contians code for the API's for a generic social network. This n
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
-* [Walkthroughs] (#walkthroughs)
+* [Walkthroughs](#walkthroughs)
 * [License](#license)
 * [Questions](#questions)
 
@@ -28,8 +28,8 @@ npm start
 
 Here are three walkthrough videos to explain code and show functionality.
 
-[Code Walkthrough Video](https://drive.google.com/file/d/19TiBxhIoysCo0GHjW3WO52QYXfV4xH41/view?usp=sharing)
-[User and Friend Routes Tested in Insomnia](https://drive.google.com/file/d/1WaA3Lt5u1I28wwawtvsvzfBSmMPWoSNL/view?usp=sharing)
+[Code Walkthrough Video](https://drive.google.com/file/d/19TiBxhIoysCo0GHjW3WO52QYXfV4xH41/view?usp=sharing) <br/>
+[User and Friend Routes Tested in Insomnia](https://drive.google.com/file/d/1WaA3Lt5u1I28wwawtvsvzfBSmMPWoSNL/view?usp=sharing) <br/>
 [Thoughts and Reaction Routes Tested in Insomnia](https://drive.google.com/file/d/1HAD2bppJQKPn9FrxCp4MPeV6_8NXFJoj/view?usp=sharing)
 
 

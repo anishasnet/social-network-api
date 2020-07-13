@@ -1,4 +1,6 @@
 const router = require('express').Router();
+
+// methods from thought-controller
 const { getAllThought,
         getThoughtById,
         addThought, 
@@ -9,6 +11,7 @@ const { getAllThought,
         test
 } = require('../../controllers/thought-controller');
 
+//setting api routes for thoughts
 router
   .route('/')
   .get(getAllThought)
@@ -18,6 +21,7 @@ router
     .get(getThoughtById)
     .put(updateThought)
     .delete(removeThought)
+// setting api routes for reactions
 router
     .route('/:id/reactions')
     .post(addReaction)

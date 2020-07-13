@@ -1,6 +1,7 @@
 const { Schema, model } = require('mongoose');
 const moment = require('moment');
 
+//User Schema
 const UserSchema = new Schema({
     username: {
     type: String,
@@ -12,7 +13,8 @@ const UserSchema = new Schema({
     type: String,
     unique: true, 
     required: true,
-    match: [/^([a-z0-9_\.-]+)@([a-z\.-]+)\.([a-z\.]{2,6})$/, 'Please enter a valid email address!']
+    //email validation
+    match: [/^([a-z0-9_\.-]+)@([a-z\.-]+)\.([a-z\.]{2,6})$/, 'Please enter a valid email address.']
 },
     thoughts: [
     {
@@ -41,4 +43,5 @@ UserSchema.virtual('friendCount').get(function() {
 
 const User = model('User', UserSchema);
 
+// export User model
 module.exports = User;

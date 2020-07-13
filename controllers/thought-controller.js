@@ -33,7 +33,6 @@ const thoughtController = {
                     )
                 })
                 .then(dbUserData => {
-                    console.log(dbUserData);
                     if(!dbUserData) {
                         res.status(404).json({ message: 'There is no thought associated with this ID.'});
                         return;
@@ -43,7 +42,6 @@ const thoughtController = {
                 .catch(err => res.status(400).json(err));
     },
     updateThought({params, body}, res) {
-        console.log(params);
         Thought.findOneAndUpdate({ _id: params.id}, body, { new: true, runValidators: true })
         .then(dbThoughtData => {
             if (!dbThoughtData) {
@@ -105,5 +103,8 @@ const thoughtController = {
         })
         .catch(err => res.status(400).json(err))
     },
+    test(req, res) {
+        res.json({ message: "Worked"})
+    }
 }
 module.exports = thoughtController;

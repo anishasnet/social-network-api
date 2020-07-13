@@ -4,6 +4,8 @@
   "description": "This is the api for a social network. Contains models and routes for users, and their content.",
   "main": "server.js",
   "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.27.0",
     "mongoose": "^5.9.22"
   },
   "devDependencies": {},
